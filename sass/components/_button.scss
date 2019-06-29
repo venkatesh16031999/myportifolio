@@ -1,0 +1,28 @@
+.btn{
+	font-size: 2.3rem;
+	margin-top: 1.5rem;
+	outline: none;
+	border: none;
+	backface-visibility: hidden;
+
+	&-transparent{
+		background-color: $transparent-color;
+		border-bottom: .3rem solid $white-color;
+		border-radius: 1rem; 
+		padding: .6rem;
+		color: $white-color;
+		letter-spacing: .2rem;
+		transition: border .3s;
+
+		&:hover{
+			color: $white-color;
+			font-weight: 1.5rem;
+			border-radius: 1rem; 
+			border-bottom: .3rem solid $white-color;
+			transform-origin: bottom;
+			border-top: .3rem solid $white-color;
+			border-right: $transparent-color;
+			border-left: $transparent-color;
+		}
+	}
+}

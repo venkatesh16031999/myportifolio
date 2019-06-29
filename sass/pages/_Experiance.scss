@@ -1,0 +1,74 @@
+.Experiance{
+    height: 100vh;
+    background-color:$white-color;
+    -webkit-transform: skewY(-4deg);
+    z-index: 3;
+    margin-top: -10vh; 
+    position: relative;
+
+    & > *{
+        -webkit-transform: skewY(4deg);   
+    }
+
+    &__wrapper{
+        position: absolute;
+        top: 5%;
+        height: 80vh;
+        width: 100vw;
+    }
+
+    &__heading{
+        text-align: center;
+        font-size: 4rem;
+    }
+   
+    &__content-wrapper{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: aqua;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__flipcard-wrapper{
+        height: 35rem;
+        width: 25rem;
+        perspective: 1500px;
+        backface-visibility: hidden;
+       position: relative;
+    }
+
+
+    &__flipcard-1-front{
+        height: 100%;
+        width: 100%;
+        background-color: chartreuse;
+        transform: rotateY(0deg);
+        transition: transform 2s;
+        position: absolute;
+
+    }
+
+    &__flipcard-1-back{
+        height: 100%;
+        width: 100%;
+        background-color: rgb(51, 0, 20);
+        transform: rotateY(-180deg);
+        transition: transform 2s;
+        position: absolute;
+
+    }
+
+    &__flipcard-wrapper:hover &__flipcard-1-back{
+        transform: rotateY(0deg);
+        z-index: -1;
+    }
+
+    &__flipcard-wrapper:hover &__flipcard-1-front{
+        transform: rotateY(180deg);
+        z-index: 1;
+    }
+
+}
+

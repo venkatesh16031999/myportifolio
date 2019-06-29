@@ -1,0 +1,18 @@
+
+@keyframes blinker{
+    0%{
+        color:$transparent-color;
+    }
+    25%{
+        color:$white-color;
+    }
+    50%{
+        color:$transparent-color;
+    }
+    75%{
+        color:$white-color;
+    }
+    100%{
+		color:$transparent-color;
+    }
+}
